@@ -22,6 +22,7 @@ workspace.members = [
     "examples/ironfish",
     "examples/simple",
     "examples/text_flow",
+    "examples/text_layout",
     "experiments/bigfish",
     "experiments/teamtalk",
     "experiments/huedmx",

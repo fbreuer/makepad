@@ -1,4 +1,5 @@
 use makepad_widgets::*;
+pub use makepad_rustybuzz::*;
    
 live_design!{
     import makepad_widgets::base::*;
@@ -26,7 +27,7 @@ live_design!{
                     y: 0.5
                 },
                 button1 = <Button> {
-                    text: "Hello world 13241234312434214321234112343412412312343421"
+                    text: "Hello world"
                     draw_text:{color:#f00}
                 }
                 input1 = <TextInput> {
@@ -78,9 +79,10 @@ live_design!{
                     <blockquote>block<b>quote</b><br/><blockquote>blockquote</blockquote><br/>
                     Next line <br/>
                     <sep/>
-                    </blockquote><b><i>Bold italic</i><br/>
+                    </blockquote><b><i>Bold italic</i></b><br/>
                     <sep/></br>
                     <pre>this is a preformatted code block</pre>
+                    <p>Yeah. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. This is a long paragraph of text. </p>
                     "
                 }
                 <Markdown>{
@@ -144,7 +146,7 @@ impl LiveRegister for App {
 impl MatchEvent for App{
     fn handle_actions(&mut self, cx: &mut Cx, actions:&Actions){
         if self.ui.button(id!(button1)).clicked(&actions) {
-            log!("BUTTON CLICKED {}", self.counter); 
+            log!("BUTTON CLICKED!! {}", self.counter); 
             self.counter += 1;
             let label = self.ui.label(id!(label1));
             label.set_text_and_redraw(cx,&format!("Counter: {}", self.counter));
