@@ -14,8 +14,8 @@ live_design!{
     }
 }
 
-#[derive(Live, LiveHook)]
-#[live_ignore]
+#[derive(Live, LiveHook)] 
+#[live_ignore] 
 #[repr(u32)]
 pub enum FlowBlockType {
     #[pick] Quote = shader_enum(1),
@@ -232,7 +232,7 @@ impl TextFlow{
                 left: self.list_item_layout.padding.left + pad,
                 ..self.list_item_layout.padding
             },
-            ..self.list_item_layout
+            ..self.list_item_layout 
         });
         // lets draw the 'marker' at -x 
         // lets get the turtle position and abs draw 
